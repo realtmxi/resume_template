@@ -1,0 +1,194 @@
+%% start of file `template.tex'.
+%% @Copyright 2022-2023 Murphy Tian (murphytian06@gmail.com)
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}    
+\usepackage{pdfpages}%
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{multicol}
+% adjust the page margins
+\usepackage[scale=0.8,top=0.5cm, bottom=0.1cm]{geometry}
+% \usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{xpatch}
+\xpatchcmd\cventry{,}{}{}{}
+
+% personal data
+
+\name{Muxin (Murphy)}{Tian}                               % optional, remove / comment the line if not wanted
+% \address{Toronto}{Canada}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\vspace*{3mm}
+\phone[mobile]{(437)~329~6709}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+% \phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{murphy.tian@mail.utoronto.ca}                               % optional, remove / comment the line if not wanted
+% \homepage{}                         % optional, remove / comment the line if not wanted
+ \social[github]{realtmxi}   
+ \social[linkedin]{murphytian}
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\vspace*{-1.05mm}
+\makecvtitle
+\vspace*{-10mm}
+
+\section{Education}
+\cventry{}{}{University of Toronto, St. George}{September 2021 -- Present}{\hspace*{-2.5 mm} Computer Science Specialist, Arts \& Science Internship Program}{Cumulative GPA: 3.91 / 4.00 }
+
+
+\vspace{-4pt}
+Dean's List Scholar of the Year 2022
+
+\vspace{3 pt}
+
+{}{\textbf{Relevant Coursework:}}
+%\vspace{-1.0em}\begin{small}
+% \begin{multicols}{3}
+%    \begin{itemize}
+%%\item Intro to Computer Prog
+%%\item Intro to Comp Sci
+%%\item Math Expr \& Rsng for CS
+%%\item Software Design
+%%\item Software Tools \& System Prog
+%%\item Intro to Theory Computation
+%\item Intro to Machine Learning
+%\item Neural Network \& Deep Learning
+%\item Natural Language Computing
+%\item Intro to Visual Computing
+%\item Intro to Image Understanding
+%\item Intro to Databases
+%\item Principles of Program Languages
+%\item Enriched Data Struct \& Analysis
+%\item Computational Complexity \& Computability
+%\item Algorithm Design, Analysis \& Complexity
+%
+%    \end{itemize}
+%    \end{multicols}\end{small}
+Machine Learning, Visual Computing, Databases, Image Understanding, Natural Language Computing,
+Data Structure and Algorithm Design, Software Design
+\section{Skills}
+%\subsection*{Programming Languages}
+Python(for 3 years), Java(for 4 years), C(for 1 year), SQL (Postgre), Git, Shell Script (Bash), R, HTML, CSS, JavaScript, Racket, Haskell;
+%\subsection*{Machine learning frameworks}
+PyTorch and Numpy framework in machine learning
+
+%\subsection*{Functional Programming Languages}
+%LISP, Scheme, Racket, Haskell
+
+\section{Activites}
+\cventry{}{}{Tecent FISU AI Arena}{August 2022 - Present \vspace{-1.0em}}{}{
+% Detailed achievements:%
+\emph{Chengdu, China}
+\begin{itemize}
+\item Participated in a AI Development competition collaborated with 2 members to develop a reinforcement learning model for the MOBA game Honour of Kings.
+\item Competed among teams where all of the other teams are almost graduate students.
+\item Proposed an algorithm to test the effectiveness of our model
+\end{itemize}}
+
+
+\section{Research}
+\cventry{}{}{A Inter and Intra Country Mobility Based COVID-19 Model}{June 2022 - Present\vspace{-1.0em}}{}{
+\begin{itemize}
+\item Constructed a computer model to simulate and forecast the transmission of SARS-CoV-2 in Ontario.
+\item Used CNN, LSTM, and MCMC to estimate the prior distribution of the epidemiological data, future population mobility, and commuting flow.
+\item Wide use of Numpy and convolution for dimensionality reduction.
+\item Will be send to peer review and available as a pre-print on medRxiv in early 2023.
+\end{itemize}}
+
+
+\section{Projects}
+\cventry{}{}{DogBreed Classification $|$ Python}{November 2022 \vspace{-1.0em}}{}{
+% Detailed achievements:%
+\begin{itemize}
+\item Using CNN and ResNet to classify dog images on DBI and SDD datasets
+\item Evaluated the performance of different models under specific training epochs.
+\end{itemize}}
+\cventry{}{}{Feature detection and homo transform reconstruction $|$ Python}{November 2022 \vspace{-1.0em}}{}{
+% Detailed achievements:%
+\begin{itemize}
+\item Construct a Harris corner detection from the ground without any explicit use of packages(addition to Numpy) to identify the corners and edges in an image.
+\item Construct a SIFT feature descriptor to evaluate the relationship between images.
+\item Use homogrpaphy to combine images of object taken at different places, for noise-reduction and super-resolution.
+\end{itemize}}
+
+\cventry{}{}{Neural Machine Translation $|$ Python}{February 2023 \vspace{-1.0em}}{}{
+% Detailed achievements:%
+\begin{itemize}
+\item Implementing a \textit{seq2seq} model, without attention, with single-headed attention, and with multi-headed attention.
+\item Training the models with RNN teacher-forcing and decode using beam search.
+\item Corpus comes from the official records of the 36$^{th}$ Canadian Parliament. 
+\end{itemize}}
+
+
+%\cventry{}{}{RateMyUni $|$ Java}{May 2022 - August 2022 \vspace{-1.0em}}{}{
+%% Detailed achievements:%
+%\begin{itemize}
+%\item A project dedicated for students to rate universities around the globe
+%\item Implemented a fully functional GUI that allows the users to execute complex instructions
+%\item Implemented a secure register \& login system that requires a Multi-Factor Authentication using Email 
+%\item Adhered to the SOLID Design principles and Clean architecture to design the program
+%\end{itemize}}
+%\section{Achievements}
+%
+%\cventry{}{}{Dean's List Scholar}{2022\vspace{-1.0em}}{}{
+%% Detailed achievements:%
+%University of Toronto 2022 Year 
+%}
+
+\section{Awards}
+\cventry{}{}{Euclid Mathematics Contest} {2019 \vspace{-1.0em}}{}{
+\emph{Ontario, Canada}\\
+Achieved a Top 25\% Award}
+\vspace{5 pt}
+%\cventry{}{}{Euclid Mathematics Contest} {2019 \vspace{-1.0em}}{}{
+%\emph{Ontario, Canada}\\
+%Achieved a Top 25\% Award}
+
+%\vspace{5 pt}
+
+\cventry{}{}{Chinese National High School Mathematics Competition} {2018 \vspace{-1.0em}}{}{
+\emph{HeiLongJiang, China}\\
+Achieved a Second Prize
+}
+
+%\vspace{5 pt}
+%\cventry{}{}{Chinese National High School Mathematics Competition} {2017 \vspace{-1.0em}}{}{
+%\emph{HeiLongJiang, China}\\
+%Achieved a Second Prize
+%}
+%
+%\vspace{5 pt}
+%
+%\cventry{}{}{Chinese National High School Physics Competition} {2017 \vspace{-1.0em}}{}{
+%\emph{HeiLongJiang, China}\\
+%Achieved a Second Prize
+%}
+%  
+  
+\end{document}
